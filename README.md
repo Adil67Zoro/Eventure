@@ -4,7 +4,9 @@
 
 Введите в терминал cd .\eventure\. Теперь нужно скачать нужные packages. Напишите следующие команды по одному:
 npm i react-router-dom
+
 npm install firebase
+
 npm i react-notifications
 
 И наконец то введите npm start чтобы запустить проект.
