@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: green;
+    width: 100%;
+    height: 180px;
+} 
+
+.logo{
+    width: 100%;
+    background-color: rgb(180, 213, 224);
+    border: none;
+    color: rgb(0, 77, 153);
+    font-size: 50px;
+    font-weight:600;
+}
+
+.header_button{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    transform: translateY(50%);
+    font-size: 20px;
+    transition: 0.2s ease;
+    margin-left: 10px;
+}
+
+.header_button:hover{
+    background-color: lightgreen;
+}

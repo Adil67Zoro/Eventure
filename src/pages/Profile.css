@@ -1,0 +1,65 @@
+.Profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.page{
+    display: flex;
+    flex-direction: row;
+}
+
+.bookedEvent{
+    border: 2px solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.my_bookings{
+    width: 800px;  
+}
+
+.settings{
+    border-left: 3px solid;
+    width: 300px;
+    height: 180px;
+    margin-top: 70px;
+    margin-left: 70px;
+}
+
+.title{
+    margin-left: 280px;
+}
+
+.log_out{
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 20px;
+    transition: 0.2s ease;
+    margin-left: 100px;
+}
+
+.log_out:hover{
+    background-color: lightgreen;
+}
+
+.delete{
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 20px;
+    transition: 0.2s ease;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.delete:hover{
+    background-color: red;
+}
+
+.info{
+    margin-left: 20px;
+}
