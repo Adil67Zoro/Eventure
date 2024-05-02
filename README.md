@@ -1,4 +1,4 @@
-Чтобы инициализировать приложение, сначала откройте терминал в Visual Studio Code и введите: npx create-react-app eventure
+Чтобы инициализировать приложение, сначала откройте терминал в Visual Studio Code и введите: npx create-react-app eventure (если выдает command not found, установите nodejs и попробуйте снова)
 
 После того как все загрузится, откройте файл eventure, и удалите папки public и src. Теперь возьмите папки public и src с моего repository и вставьте в вашу папку.
 
