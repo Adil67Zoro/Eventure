@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+Чтобы инициализировать приложение, сначала откройте терминал в Visual Studio Code и введите: npx create-react-app eventure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+После того как все загрузится, откройте файл eventure, и удалите папки public и src. Теперь возьмите папки public и src с моего repository и вставьте в вашу папку.
 
-## Available Scripts
+Введите в терминал cd .\eventure\. Теперь нужно скачать нужные packages. Напишите следующие команды по одному:
+npm i react-router-dom
+npm install firebase
+npm i react-notifications
 
-In the project directory, you can run:
+И наконец то введите npm start чтобы запустить проект.
 
-### `npm start`
+Чтобы добавлять или удалять мероприятие, зайдите на сайт https://firebase.google.com/. Нажмите на кнопку Get Started и зайдите в ваш gmail аккаунт. 
+Я только дал доступ аккаунту nfactorialincubator2022@gmail.com. Но если хотите зайти через другой аккаунт, у вас не будет доступа, и вам нужно будет со мной связаться чтобы я предоставил доступ другому gmail аккаунту. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+После этого, у вас должно будет отображаться данное сообщение в главном меню: "You have 1 pending project ownership invitation". Нажмите "See invitation". Поставьте нужные галочки и нажмите "Accept 1 invitation". Вас должно сразу перенаправить на главную страницу проекта Eventure. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+На левой стороне экрана будет "Product categories". Нажмите конпку "Build", и выберите "Authentication". Эта категория показывает всех User-ов которые сделают аутентификация через Google аккаунты. Теперь выберите "Firestore Database" (тоже в "Build"). Это Database моего проекта. Как вы можете увидеть, здесь два collection-а: "events" и "users". "events" показывает все документы, в которых содержатся информаций о всех мероприятиях. Чтобы добавить новое мероприятие, нажмите на кнопку "Add document". Введите "Document ID" (желательно одно слово) и создайте следующие field-ы: name(string)-название мероприятия, date(string)-день и время, address(string)-адрес, img(string)-фото, people(array)-юзеры которые забронировали место на это мероприятие, current(number)-число людей которые уже забронировали (напишите 0 в самом начале), total(number)-общее количество мест, и id(string)-напишите то что написали в "Document ID". 
 
-### `npm test`
+В collection-e "users" находятся все юзеры которые сделали аутентификацию. Сюда добавлять ничего не надо, код сам будет добавлять юзеров. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+****Процесс проектирования и разработки****
+Для данного проекта я использовал React.js для фронтенда, Firebase для бэкенда и управления базой данных, а также библиотеку react-notifications для уведомлений. 
+Само приложение разделено на три компонента: Home(/), где показываются все мероприятия и функционал чтобы забронировать свое место, Header, где находятся кнопки чтобы зайти в гугл аккаунт и перейти в профиль, и Profile(/), где отображаются все забронированные мероприятия, функционал чтобы отменить свое забронирование и кнопка чтобы выйти из своей учетной записи. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+****Проблемы в приложении****
+Как вы можете заметить, у меня отсутсвует функция добавления мероприятия в Goole Calendar потому что чтобы использовать google calendar api, нужно создать новый index.html файл и вставить туда нужные скрипты, но проблема в том что когда react создает приложение, дефолтный index.html файл уже создается и когда я удалял этот index.html чтобы создать новый для google calendar api, у меня выдовало ошибку потому что этот index.html созданный react-ом является объязательным чтобы проект запускался. Чтобы решить данную проблему, я перепробовал все другие алтернативные приложения как microsoft outlook calendar api, zoho calendar api, clickUp api и т.д., но безуспешно. А так же вы можете заметить что дизайн сайта конечно не самый лучший потому что я как дизайнер не так хорош. Надеюсь что я улучшу данный навык на ваших оффлайн лекциях по UI/UX-дизайн на летнем инкубаторе. 
